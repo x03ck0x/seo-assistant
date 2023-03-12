@@ -100,8 +100,11 @@ export default function Home() {
 
           </div>
         )}
-
-        <div className={styles.result}>{result}</div>
+        {result && (
+        <div className={styles.result} 
+        dangerouslySetInnerHTML={{ __html: result }}
+        />
+        )}
       </main>
       
     </div>
