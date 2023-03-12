@@ -26,7 +26,7 @@ function generatePrompt(name, services, address, language) {
   //return `Generate a high-quality Meta Description in for this keywords: ${keywords}$ , for the entreprise name use this ${name}$ , use ${services}$ as services they provide, use this address: ${address}$ , as address or city.`
   return `
   You are an expert in SEO speaking fluent ${language}$. For the following keywords or text prompt 
-  -- [PROMPT] ${name} , services; ${services} , address; ${address} ,
+  -- [PROMPT] ${name} ,
   please write an optimized meta-title, the title should be 50-70 characters long, 
   a short meta-description that is compelling and makes people want to click, 
   the description should be a maximum of 160 characters long. Everything must be in language ${language}.
