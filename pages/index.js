@@ -2,6 +2,7 @@ import seo from './seo';
 import pets from './pets';
 import react from "react";
 import Head from "next/head";
+import ReactDOM from 'react-dom';
 
 //export default seo
 
