@@ -60,16 +60,16 @@ export default function Home() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          {/* <label>Services</label>
+          <label>Services</label>
           <input
             type="text"
             name="services"
-            placeholder="Enter the services here"
+            placeholder="Services here"
             value={services}
             onChange={(e) => setServices(e.target.value)}
-          /> */}
+          />
           
-          {/* <label>Address</label>
+          <label>Address</label>
           <select
             name="address"
             value={address}
@@ -78,7 +78,8 @@ export default function Home() {
             <option value=""></option>
             <option value="Belgique">Belgique</option>
             <option value="France">France</option>
-          </select> */}
+          </select>
+          
           <label>language</label>
           <select
             name="language"
