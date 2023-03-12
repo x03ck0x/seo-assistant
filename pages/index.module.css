@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+#__next {
+
+  height: 100vh;
+  width: 100vw;
+  /*background-color: #0093E9;*/
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  display: block;
+  margin-top: 0px!important;
+  margin-right: 0px!important;
+  margin-bottom: 0px!important;
+  margin-left: 0px!important;
+}
+
+.main,
+.main input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+  
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  /*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(31,38,41,1) 48%, rgba(33,45,47,1) 100%);*/
+  /*background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);*/
+}
+.main .icon {
+  width: 34px;
+}
+.main h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #202123;
+  margin: 16px 0 40px;
+}
+.main form {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+}
+.main input[type="text"],
+.main input[type="number"],
+.main select {
+  padding: 12px 12px 9px;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  outline-color: #cfcfcf;
+}
+.main ::placeholder {
+  color: #3a3a3d;
+  opacity: 1;
+}
+.main input[type="submit"] {
+  padding: 12px 0;
+  color: #fff;
+  background-image: linear-gradient(to right, #77A1D3 0%, #7dc1db  51%, #77A1D3  100%);
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+.main input[type="submit"]:hover {
+  background-position: right center;
+}        
+
+.main .result {
+  font-weight: bold;
+  margin-top: 40px;
+}
