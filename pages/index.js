@@ -12,12 +12,3 @@ const AppLinks = () => {
       </ul>
     )
   }
-  
-  ReactDOM.render(
-    <>
-      <Seo />
-      <AppLinks />
-      <App />
-    </>,
-    document.getElementById('root')
-  );
