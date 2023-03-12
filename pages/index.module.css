@@ -13,18 +13,17 @@
   font-weight: bold;
   font-style: normal;
 }
-#__next {
+/*#__next {
 
   height: 100vh;
   width: 100vw;
-  /*background-color: #0093E9;*/
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   display: block;
   margin-top: 0px!important;
   margin-right: 0px!important;
   margin-bottom: 0px!important;
   margin-left: 0px!important;
-}
+}*/
 
 .main,
 .main input {
@@ -51,7 +50,17 @@
   font-weight: bold;
   color: #202123;
   margin: 16px 0 40px;
+  text-align: center;
 }
+.main h4 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #202123;
+  margin: 16px 0 40px;
+  text-align: center;
+}
+
 .main form {
   display: flex;
   flex-direction: column;

@@ -4,32 +4,40 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [keywords, setKeywords] = useState("Habibi rénovation");
   const [name, setName] = useState("Habibi rénovation");
   const [services, setServices] = useState("peinture, rénovation intérieur, rénovation salle de bain");
   const [address, setAddress] = useState("");
   const [language, setLanguage] = useState("French");
 
+  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState();
 
   
   async function onSubmit(event) {
     event.preventDefault();
-    /* if (loading) {
+    
+    if (loading) {
       return;
-    } */
-    //setLoading(true);
-    //setResult('');
-    const response = await fetch('/api/generate-seo', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ keywords, name, services, address, language }),
-    });
-    const data = await response.json();
-    setResult(data.result .replaceAll('\\n', ' <br />') );
-    //setLoading(false);
+    }
+    setLoading(true);
+
+    try {
+
+      const response = await fetch('/api/generate-seo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, services, address, language }),
+      });
+      const data = await response.json();
+      setResult(data.result.replaceAll('\n', '<br />'));
+
+    } catch (e) {
+      alert('failed to submit, try again bish')
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -44,14 +52,6 @@ export default function Home() {
         <img src="/skull.png" className={styles.icon} />
         <h3>SEO generator 1.0</h3>
         <form onSubmit={onSubmit}>
-          <label>keywords</label>
-          <input
-            type="text"
-            name="keywords"
-            placeholder="Enter the keywords here"
-            value={keywords}
-            onChange={(e) => setKeywords(e.target.value)}
-          />
           <label>Name</label>
           <input
             type="text"
@@ -90,12 +90,22 @@ export default function Home() {
             <option value="Dutch">Dutch</option>
           </select>
 
-          <input type="submit" value="Generate" />
-          <div className={styles.result}>{result}</div>
-          
+          <input type="submit" value="Generate" />          
         </form>
+
+        {loading && (
+          <div>
+            <h4>Working on the best SEO</h4>
+            { <img src="/css-load.gif" className={styles.loading} /> }
+
+          </div>
+        )}
+
+        <div className={styles.result}>{result}</div>
       </main>
       
     </div>
   );
 }
+
+
