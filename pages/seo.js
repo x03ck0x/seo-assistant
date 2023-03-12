@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [name, setName] = useState("Habibi toiture à Namur");
+  const [name, setName] = useState("Opticien Gervy à Rixensart");
   const [services, setServices] = useState("");
   const [address, setAddress] = useState("");
   const [language, setLanguage] = useState("French");
@@ -79,7 +79,7 @@ export default function Home() {
             <option value="Belgique">Belgique</option>
             <option value="France">France</option>
           </select>
-          
+
           <label>language</label>
           <select
             name="language"
