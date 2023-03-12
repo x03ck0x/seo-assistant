@@ -16,11 +16,3 @@ const AppLinks = () => {
     )
   }
   
-  ReactDOM.render(
-    <>
-      <Seo />
-      <AppLinks />
-      <App />
-    </>,
-    document.getElementById('root')
-  );
