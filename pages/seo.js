@@ -4,8 +4,8 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [name, setName] = useState("Habibi rénovation");
-  const [services, setServices] = useState("peinture, rénovation intérieur, rénovation salle de bain");
+  const [name, setName] = useState("Habibi toiture à Namur");
+  const [services, setServices] = useState("");
   const [address, setAddress] = useState("");
   const [language, setLanguage] = useState("French");
 
