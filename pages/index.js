@@ -7,20 +7,16 @@ import styles from "./index.module.css";
 
 export default () => (
     <div>
-        <Head>
-            <title>Index</title>
-            <link rel="icon" href="/skull.png" />
-        </Head>
-        <style jsx global>{`
+      <style jsx global>{`
         body {
           background-color: #121213;
         }
       `}</style>
-
         <div className={styles.card}>
             <div className={styles.cardBody}>
                 <img src="/skull.png" className={styles.icon} />
                 <h3>Modules</h3>
+
                 <Link href="/seo">
                     <a>Go to SEO</a>
                 </Link>
@@ -32,6 +28,6 @@ export default () => (
                 </Link>
             </div>
         </div>
-
+        
     </div>
 );
