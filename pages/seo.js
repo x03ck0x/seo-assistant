@@ -12,12 +12,6 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState();
   
-<style jsx global>{`
-        body {
-          background-color: #121213;
-        }
-      `}</style>
-  
   async function onSubmit(event) {
     event.preventDefault();
     
@@ -112,7 +106,13 @@ export default function Home() {
         />
         )}
       </main>
-      
+
+      <style jsx global>{`
+        body {
+          background-color: #121213;
+        }
+      `}</style>
+
     </div>
   );
 }
