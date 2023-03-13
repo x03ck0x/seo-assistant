@@ -12,9 +12,9 @@ export default (seo) => (
       }
     `}</style>
 
-    Hello, One!
+    Modules : 
     <Link href="/seo">
-      <a>Go to two</a>
+      <a>Go to SEO</a>
     </Link>
   </div>
 );
