@@ -110,9 +110,8 @@
   align-items: center;
   height: 300px;
   width: 300px;
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom right, #131c4f, #1c295b);
   border-radius: 10px;
-  backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   margin: 30px;
 }
@@ -125,13 +124,14 @@
   height: 100%;
   width: 100%;
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 24px;
 }
 
 .cardBody a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   margin: 10px;
   font-size: 18px;
 }
+
