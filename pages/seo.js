@@ -110,12 +110,6 @@ export default function Home() {
       
     </div>
   );
-  <style jsx global>{`
-  body {
-    background-color: black;
-
-  }
-`}</style>
 }
 
 

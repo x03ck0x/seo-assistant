@@ -4,27 +4,20 @@ import styles from "./index.module.css";
 
 //export default seo
 
+
 export default () => (
-  <div>
-
-    <style jsx global>{`
-      body {
-        background-color: black;
-        color: white;
-        align-items: center;
-      }
-    `}</style>
-
-    Modules : <br/>
-    <Link href="/seo">
-      <a> Go to SEO</a>
-    </Link><br/>
-    <Link href="/alternative">
-      <a> Go to Alternative</a>
-    </Link><br/>
-    <Link href="/article">
-      <a> Go to Article</a>
-    </Link>
-
+  <div className={styles.card}>
+    <div className={styles.cardBody}>
+      <h2>Modules</h2>
+      <Link href="/seo">
+        <a>Go to SEO</a>
+      </Link>
+      <Link href="/alternative">
+        <a>Go to Alternative</a>
+      </Link>
+      <Link href="/article">
+        <a>Go to Article</a>
+      </Link>
+    </div>
   </div>
 );
