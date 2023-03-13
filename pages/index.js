@@ -3,12 +3,14 @@ import Link from "next/link";
 
 //export default seo
 
-export default (seo) => (
+export default () => (
   <div>
 
     <style jsx global>{`
       body {
         background-color: black;
+        color: white;
+        align-items: center;
       }
     `}</style>
 
