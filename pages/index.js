@@ -14,7 +14,7 @@ export default () => (
       `}</style>
         <div className={styles.card}>
             <div className={styles.cardBody}>
-                <img src="/skull.png" className={styles.icon} />
+
                 <h3>Modules</h3>
 
                 <Link href="/seo">
