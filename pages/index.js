@@ -1,5 +1,6 @@
 import seo from './seo';
 import Link from "next/link";
+import styles from "./index.module.css";
 
 //export default seo
 
@@ -14,7 +15,7 @@ export default () => (
       }
     `}</style>
 
-    Modules : 
+    Modules : <br/>
     <Link href="/seo">
       <a> Go to SEO</a>
     </Link><br/>
