@@ -9,7 +9,8 @@ export default () => (
     <div>
       <style jsx global>{`
         body {
-          background-color: black;
+          
+          background: linear-gradient(to bottom right, #1f1f24, #121213);
           color: white;
         }
       `}</style>
