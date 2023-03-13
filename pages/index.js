@@ -26,6 +26,9 @@ export default () => (
                 <Link href="/article">
                     <a>Go to Article</a>
                 </Link>
+                <Link href="/keywords">
+                    <a>Go to Keywords generator</a>
+                </Link>
             </div>
         </div>
         
