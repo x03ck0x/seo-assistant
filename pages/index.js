@@ -19,7 +19,7 @@ export default () => (
       <a> Go to SEO</a>
     </Link>
     <Link href="/alternative">
-      <a> Go to Alternative</a>
+      <a> Go to Alternative</a><br />
     </Link>
     <Link href="/article">
       <a> Go to Article</a>
