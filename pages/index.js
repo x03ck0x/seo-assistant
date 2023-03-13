@@ -17,10 +17,10 @@ export default () => (
     Modules : 
     <Link href="/seo">
       <a> Go to SEO</a>
-    </Link>
+    </Link><br/>
     <Link href="/alternative">
-      <a> Go to Alternative</a><br />
-    </Link>
+      <a> Go to Alternative</a>
+    </Link><br/>
     <Link href="/article">
       <a> Go to Article</a>
     </Link>
