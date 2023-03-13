@@ -115,6 +115,7 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.37);
   margin: 30px;
   padding-bottom: 50px;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
 }
 
 .card:hover {
@@ -137,6 +138,10 @@
   color: #fff;
   text-decoration: none;
   margin: 10px;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
   font-size: 18px;
+  
 }
-
+.cardBody a:hover { 
+  color: #28dcfc;
+}
