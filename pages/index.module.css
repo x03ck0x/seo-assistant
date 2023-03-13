@@ -117,6 +117,10 @@
   padding-bottom: 50px;
 }
 
+.card:hover {
+  background-position: right center;
+}
+
 .cardBody {
   display: flex;
   flex-direction: column;
