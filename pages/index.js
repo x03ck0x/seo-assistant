@@ -9,9 +9,7 @@ export default () => (
     <div>
       <style jsx global>{`
         body {
-          
-          background: linear-gradient(to bottom right, #1f1f24, #121213);
-          color: white;
+          background-color: #121213;
         }
       `}</style>
         <div className={styles.card}>
