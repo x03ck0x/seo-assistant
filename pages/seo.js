@@ -43,7 +43,7 @@ export default function Home() {
     
     <div className="container">
       <Head>
-        <title>OpenAI Quickstart</title>
+        <title>Seo assistant</title>
         <link rel="icon" href="/skull.png" />
       </Head>
 
@@ -109,7 +109,7 @@ export default function Home() {
 
       <style jsx global>{`
         body {
-          background-color: #121213;
+          background-color: #fff;
         }
       `}</style>
 
