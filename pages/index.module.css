@@ -24,6 +24,10 @@
   margin-bottom: 0px!important;
   margin-left: 0px!important;
 }*/
+:root {
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(31,38,41,1) 48%, rgba(33,45,47,1) 100%);
+  /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+}
 
 .main,
 .main input {
