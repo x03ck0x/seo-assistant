@@ -1,5 +1,5 @@
 import seo from './seo';
-import seo from './alternative';
+import alternative from './alternative';
 import Link from "next/link";
 import styles from "./index.module.css";
 

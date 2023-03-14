@@ -33,7 +33,7 @@ export default function Home() {
       setResult(data.result.replaceAll('\n', '<br />'));
 
     } catch (e) {
-      alert('failed to submit, try again bish')
+      alert('failed to submit, try again')
     } finally {
       setLoading(false);
     }
