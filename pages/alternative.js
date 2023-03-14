@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [text, setText] = useState("Chez votre opticien, Vincent Gervy, notre priorité est de vous proposer un service personnalisé, car chaque client est unique. Votre opticien, seul à la barre de son magasin de Rixensart, se dévoue avec passion pour vous aider à choisir la paire de lunettes qui vous ira comme un gant, les lentilles de contact qui vous conviendront ou l’appareil auditif idéal");
+  const [text, setText] = useState("");
   const [language, setLanguage] = useState("French");
 
   const [loading, setLoading] = useState(false);
