@@ -12,7 +12,7 @@ export default async function (req, res) {
     console.log(prompt);
 
     const completion = await openai.createCompletion({
-      model: "gpt-3.5-turbo",
+      model: "text-davinci-003",
       prompt: prompt,
       temperature: 0.6,
       max_tokens: 200,
