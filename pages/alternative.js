@@ -50,13 +50,13 @@ export default function Home() {
         <h3>Seo Text Alternative</h3>
         <form onSubmit={onSubmit}>
           <label>Text</label>
-          <input
-            type="textarea"
+          <textarea
+            //type="textarea"
             name="text"
             placeholder="Enter the text here"
             value={text}
             onChange={(e) => setText(e.target.value)}
-          />
+          ></textarea>
           <label>language</label>
           <select
             name="language"
