@@ -6,7 +6,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
-    const {text} = req.body;
+    const {text, language} = req.body;
     const prompt = generatePrompt(text, language);
 
     console.log(prompt);
