@@ -51,7 +51,7 @@ export default function Home() {
         <form onSubmit={onSubmit}>
           <label>Text</label>
           <input
-            type="textarea"
+            type="text"
             name="text"
             placeholder="Enter the text here"
             value={text}
