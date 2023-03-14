@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState("In this article, I want to share with you some of the “issues or problems” that one might face while using this beautiful framework; and the possible solutions.");
   const [language, setLanguage] = useState("French");
 
   const [loading, setLoading] = useState(false);
