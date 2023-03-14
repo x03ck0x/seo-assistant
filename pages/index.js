@@ -8,6 +8,10 @@ import styles from "./index.module.css";
 
 export default () => (
     <div>
+      <Head>
+        <title>AI Dashboard</title>
+        <link rel="icon" href="/skull.png" />
+      </Head>
       <style jsx global>{`
         body {
           background-color: #121213;
