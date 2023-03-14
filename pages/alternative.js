@@ -54,6 +54,7 @@ export default function Home() {
             //type="textarea"
             name="text"
             placeholder="Enter the text here"
+            rows={10}
             value={text}
             onChange={(e) => setText(e.target.value)}
           ></textarea>
