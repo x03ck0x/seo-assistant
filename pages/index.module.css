@@ -71,7 +71,7 @@
   width: 420px;
 }
 .main input[type="text"],
-.main input[type="textarea"],
+.main textarea,
 .main input[type="number"],
 .main select {
   padding: 12px 12px 9px;
