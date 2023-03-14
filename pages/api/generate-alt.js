@@ -25,9 +25,8 @@ function generatePrompt(text, language) {
   
   //return `Generate a high-quality Meta Description in for this keywords: ${keywords}$ , for the entreprise name use this ${name}$ , use ${services}$ as services they provide, use this address: ${address}$ , as address or city.`
   return `
-  You are an expert in SEO speaking fluent ${language}$. For the following text prompt 
-  -- [PROMPT] ${text} ,
-  please write an alternative article almost identical to the text, including line breaks. 
-  Everything must be in language ${language}.
+  You are an expert in SEO speaking fluent ${language}$. For the following text prompt, 
+  please write an alternative article almost identical to the text ,
+  -- [PROMPT] ${text}
   `
 }
