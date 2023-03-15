@@ -32,6 +32,21 @@ export default () => (
                 </Link>
             </div>
         </div>
-        
+        <div className={styles.card}>
+            <div className={styles.cardBody}>
+
+                <h3>Modules II</h3>
+
+                <Link href="/#">
+                    <a>Go to IMG search</a>
+                </Link>
+                <Link href="/#">
+                    <a>Go to</a>
+                </Link>
+                <Link href="/#">
+                    <a>Go to</a>
+                </Link>
+            </div>
+        </div>
     </div>
 );
