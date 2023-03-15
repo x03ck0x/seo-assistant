@@ -108,7 +108,7 @@ export default function Home() {
       </main>
 
       <style jsx global>{`
-         body {
+        body {
           background-color: #333;
           color: #fff !important;
         }
