@@ -35,7 +35,6 @@
   line-height: 24px;
   color: #353740;
   font-family: "ColfaxAI", Helvetica, sans-serif;
-  
 }
 .main {
   display: flex;
@@ -105,6 +104,7 @@
   margin-top: 40px;
   margin-left: 10%;
   margin-right: 10%;
+  color: #00b5d4;
   background-color: #f8f8f8;
   border: 1px solid #e0e0e0;
   padding: 0px 18px 18px 18px;
