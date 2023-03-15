@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [user, setUser] = useState("Explain Sauron story");
+  const [user, setUser] = useState("Give 5 fun facts");
 
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState();
