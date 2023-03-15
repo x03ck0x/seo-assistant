@@ -105,6 +105,7 @@
   margin-top: 40px;
   margin-left: 15%;
   margin-right: 15%;
+  color: #28dcfc;
   background-color: #101013;
   border: 1px solid #868686;
   padding: 8px;
@@ -115,6 +116,9 @@
   margin-left: 15%;
   margin-right: 15%;
   color: #28dcfc;
+  background-color: #101013;
+  border: 1px solid #868686;
+  padding: 8px;
 }
 
 .card {
