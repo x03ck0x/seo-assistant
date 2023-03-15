@@ -122,7 +122,7 @@
 
 .card {
   display: inline-block;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 300px;
   width: 300px;
