@@ -40,7 +40,7 @@ export default function Home() {
     
     <div className="container">
       <Head>
-        <title>Seo assistant</title>
+        <title>Test</title>
         <link rel="icon" href="/skull.png" />
       </Head>
 
@@ -64,7 +64,6 @@ export default function Home() {
         {loading && (
           <div>
             <h4>Working...</h4>
-            { <img src="/loadskull.gif" className={styles.loading} width="50%" height="50%" /> }
 
           </div>
         )}
