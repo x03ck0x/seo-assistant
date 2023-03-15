@@ -63,8 +63,8 @@ export default function Home() {
 
         {loading && (
           <div>
-            <h4>Working on the best SEO</h4>
-            { <img src="/css-load.gif" className={styles.loading} /> }
+            <h4>Working...</h4>
+            { <img src="/barload.gif" className={styles.loading} width="50%" height="50%" /> }
 
           </div>
         )}
