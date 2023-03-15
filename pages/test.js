@@ -69,7 +69,7 @@ export default function Home() {
           </div>
         )}
         {result && (
-        <div className={styles.result} 
+        <div className={styles.result2} 
         dangerouslySetInnerHTML={{ __html: result }}
         />
         )}
@@ -80,10 +80,7 @@ export default function Home() {
           background-color: #333;
           color: #fff !important;
         }
-        input, a ,p, h1, h2, h3, h4, h5, h6 {
-          color: #fff !important;
-        }
-        .result {
+        p, h1, h2, h3, h4, h5, h6 {
           color: #fff !important;
         }
       `}</style>
