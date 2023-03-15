@@ -108,8 +108,9 @@ export default function Home() {
       </main>
 
       <style jsx global>{`
-        body {
-          background-color: #fff;
+         body {
+          background-color: #333;
+          color: #fff !important;
         }
       `}</style>
 
