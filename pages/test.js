@@ -80,7 +80,7 @@ export default function Home() {
           background-color: #333;
           color: #fff !important;
         }
-        a ,p, h1, h2, h3, h4, h5, h6 {
+        input, a ,p, h1, h2, h3, h4, h5, h6 {
           color: #fff !important;
         }
       `}</style>
