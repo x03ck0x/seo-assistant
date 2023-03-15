@@ -31,8 +31,7 @@ export default () => (
                     <a>Go to Keywords generator</a>
                 </Link>
             </div>
-        </div>
-        <div className={styles.card}>
+  
             <div className={styles.cardBody}>
 
                 <h3>Modules II</h3>
