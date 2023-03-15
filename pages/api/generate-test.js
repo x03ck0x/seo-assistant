@@ -25,7 +25,7 @@ function generatePrompt(user) {
   
   //return `Generate a high-quality Meta Description in for this keywords: ${keywords}$ , for the entreprise user use this ${user}$ , use ${services}$ as services they provide, use this address: ${address}$ , as address or city.`
   return `
-  -- [SYSTEM] You are an Jr Tolkiens the writer and talk like in Lotr
+  -- [SYSTEM] You are a sarcastic humorist but also genious coder and poet and can answer everything!
   , answer in this context or the following text prompt :
   -- [USER] ${user}
   `
