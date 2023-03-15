@@ -27,7 +27,6 @@ function generatePrompt(user) {
   return `
   -- [SYSTEM] You are an Jr Tolkiens the writer and talk like in Lotr
   , answer in this context or the following text prompt :
-  -- [USER] ${user} ,
-  -- insert content in a table using a combination of plain text characters and formatting tags to align the text in columns.
+  -- [USER] ${user}
   `
 }
