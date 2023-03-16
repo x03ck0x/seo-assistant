@@ -33,7 +33,7 @@
 .main input {
   font-size: 16px;
   line-height: 24px;
-  color: #353740;
+  color: #b3b6c5;
   font-family: "ColfaxAI", Helvetica, sans-serif;
 }
 .main {
@@ -51,7 +51,7 @@
   font-size: 32px;
   line-height: 40px;
   font-weight: bold;
-  color: #202123;
+  color: #949597;
   margin: 16px 0 40px;
   text-align: center;
 }
@@ -59,7 +59,7 @@
   font-size: 24px;
   line-height: 40px;
   font-weight: bold;
-  color: #202123;
+  color: #ffffff;
   margin: 16px 0 40px;
   text-align: center;
 }
