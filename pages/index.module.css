@@ -89,7 +89,7 @@
 .main input[type="submit"] {
   padding: 12px 0;
   color: #fff;
-  background-image: linear-gradient(to right, #77A1D3 0%, #7dc1db  51%, #77A1D3  100%);
+  background-image: linear-gradient(to right, #77A1D3 0%, #38db6f  51%, #77A1D3  100%);
   border: none;
   border-radius: 3px;
   text-align: center;
