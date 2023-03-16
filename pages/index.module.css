@@ -32,7 +32,7 @@
 .main,
 .main input {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   color: #e0e1e9;
   font-family: "ColfaxAI", Helvetica, sans-serif;
   
@@ -82,10 +82,11 @@
   background-color: #32353e;
   color: #ffffff;
   font-size: 16px;
-  line-height: 24px;
-  font-family: "ColfaxAI", Helvetica, sans-serif;
-  -webkit-appearance: none;
-  appearance: none;
+  line-height: 22px;
+  font-family: "ColfaxAI", Helvetica, sans-serif; 
+}
+.main select {
+  padding-right: 5px;
 }
 .main ::placeholder {
   color: #3a3a3d;
