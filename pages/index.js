@@ -24,7 +24,7 @@ export default () => (
                 <Link href="/alternative">
                     <a>Go to Alternative</a>
                 </Link>
-                <Link href="/#">
+                <Link href="/youtubemp3.html">
                     <a>Go to Chatgpt 4</a>
                 </Link>
                 <Link href="/test">
