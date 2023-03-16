@@ -75,10 +75,11 @@
 .main input[type="number"],
 .main select {
   padding: 12px 12px 9px;
-  border: 1px solid #d6d6d6;
+  border: 1px solid #484b57;
   border-radius: 4px;
   margin-bottom: 14px;
   outline-color: #cfcfcf;
+  background-color: #32353e;
 }
 .main ::placeholder {
   color: #3a3a3d;
