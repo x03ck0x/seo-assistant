@@ -24,29 +24,14 @@ export default () => (
                 <Link href="/alternative">
                     <a>Go to Alternative</a>
                 </Link>
-                <Link href="/article">
-                    <a>Go to Article</a>
+                <Link href="/#">
+                    <a>Go to Chatgpt 4</a>
                 </Link>
-                <Link href="/keywords">
-                    <a>Go to Keywords generator</a>
+                <Link href="/test">
+                    <a>Go to DAVINCI 003 </a>
                 </Link>
             </div>
         </div>
-        <div className={styles.card}>
-            <div className={styles.cardBody}>
-
-                <h3>Modules II</h3>
-
-                <Link href="/#">
-                    <a>Go to IMG search</a>
-                </Link>
-                <Link href="/#">
-                    <a>Go to</a>
-                </Link>
-                <Link href="/#">
-                    <a>Go to</a>
-                </Link>
-            </div>
-        </div>
+        
     </div>
 );
