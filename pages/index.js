@@ -10,7 +10,7 @@ export default () => (
     <div>
       <style jsx global>{`
         body {
-          background-color: #121213;
+          background-color: #212129;
         }
       `}</style>
         <div className={styles.card}>
