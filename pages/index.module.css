@@ -86,7 +86,9 @@
   font-family: "ColfaxAI", Helvetica, sans-serif; 
 }
 .main select {
-  padding-right: 5px;
+/*  padding-right: 5px;  */
+  -webkit-appearance: none;
+  appearance: none;
 }
 .main ::placeholder {
   color: #3a3a3d;
