@@ -91,7 +91,7 @@
   appearance: none;
 }
 .main ::placeholder {
-  color: #3a3a3d;
+  color: #808085;
   opacity: 1;
 }
 .main input[type="submit"] {
@@ -116,8 +116,8 @@
   margin-left: 10%;
   margin-right: 10%;
   color: #00b5d4;
-  background-color: #292929;
-  border: 1px solid #e0e0e0;
+  background-color: #32353e;
+  border: 1px solid #b8babb;
   padding: 0px 18px 18px 18px;
 }
 
@@ -126,7 +126,7 @@
   margin-left: 10%;
   margin-right: 10%;
   color: #28dcfc;
-  background-color: #101013;
+  background-color: #32353e;
   border: 1px solid #868686;
   padding: 0px 15px 18px 15px;
 }
@@ -137,7 +137,7 @@
   align-items: center;
   height: 300px;
   width: 300px;
-  background:  #1c1c20;
+  background:  #24262c;
   border-radius: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.37);
   margin: 30px;
