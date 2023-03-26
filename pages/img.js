@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import generateImage from './api/generate-img';
+import styles from "./index.module.css";
 
 const ImageGenerator = () => {
   const [imageUrl, setImageUrl] = useState('');
