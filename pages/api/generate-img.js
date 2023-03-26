@@ -1,4 +1,4 @@
-const YOUR_API_KEY = 'Bearer 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';
+const YOUR_API_KEY = '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';
 
 const generateImage = async () => {
   try {
