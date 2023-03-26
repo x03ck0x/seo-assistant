@@ -1,4 +1,4 @@
-const YOUR_API_KEY = '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';
+const YOUR_API_KEY = 'Bearer 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';
 
 const generateImage = async () => {
   try {
@@ -17,7 +17,7 @@ const generateImage = async () => {
     console.log('Response:', response);
 
     const responseData = await response.json();
-    
+
     console.log('Response Data:', responseData);
 
     const imageUrl = responseData.data[0].url;
