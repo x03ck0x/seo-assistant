@@ -1,4 +1,4 @@
-import { Configuration, OpenAIApi } from "openai";
+import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -21,3 +21,5 @@ const generateImage = async () => {
     console.error('Failed to generate image:', error);
   }
 };
+
+export default generateImage;
