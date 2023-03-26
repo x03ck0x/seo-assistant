@@ -6,7 +6,7 @@ const ImageGenerator = () => {
   const [imageUrl, setImageUrl] = useState('');
 
   const handleGenerateImage = async () => {
-    const res = await fetch('/api/generate-img');
+    const res = await fetch('./api/generate-img');
     const data = await res.json();
     setImageUrl(data.imageUrl);
   };
