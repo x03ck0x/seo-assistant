@@ -1,6 +1,5 @@
-const express = require('express');
-const { Configuration, OpenAIApi } = require('openai');
-const cors = require('cors');
+// pages/api/generate-img.js
+import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -8,21 +7,18 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const generateImage = async () => {
+export default async function handler(req, res) {
   try {
     const response = await openai.imageBeta.create({
-      prompt: "a white siamese cat",
+      prompt: 'a white siamese cat',
       n: 1,
-      size: "1024x1024",
+      size: '1024x1024',
     });
 
     const imageUrl = response.data[0].url;
-    console.log(imageUrl);
-    return imageUrl;
+    res.status(200).json({ imageUrl });
   } catch (error) {
-    console.error("Failed to generate image:", error);
+    console.error('Failed to generate image:', error);
+    res.status(500).json({ error: 'Failed to generate image' });
   }
-};
-
-export default generateImage;
-
+}
