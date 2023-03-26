@@ -14,8 +14,12 @@ const generateImage = async () => {
         size: '1024x1024',
       }),
     });
+    console.log('Response:', response);
 
     const responseData = await response.json();
+    
+    console.log('Response Data:', responseData);
+
     const imageUrl = responseData.data[0].url;
     console.log(imageUrl);
     return imageUrl;
