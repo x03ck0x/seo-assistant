@@ -6,7 +6,7 @@ const ImageGenerator = () => {
 
   const handleGenerateImage = async () => {
     try {
-      const response = await axios.post('/api/generate-image', {
+      const response = await axios.post('/api/generate-img', {
         prompt: 'a white siamese cat',
         n: 1,
         size: '1024x1024',
