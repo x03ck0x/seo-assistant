@@ -9,11 +9,11 @@ const ImageGenerator = () => {
       const response = await axios.post('./api/generate-img', {
         prompt: 'a white siamese cat',
         n: 1,
-        size: '1024x1024',
+        size: '256x256',
       });
 
-      const { imageUrl } = response.data;
-      setImageUrl(imageUrl);
+      const { url } = response.data; // corrected variable name
+      setImageUrl(url);
     } catch (error) {
       console.error('Failed to generate image:', error);
     }
@@ -28,5 +28,6 @@ const ImageGenerator = () => {
 };
 
 export default ImageGenerator;
+
 
 
