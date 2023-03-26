@@ -1,31 +1,32 @@
-import React, { useState } from 'react';
-import generateImage from './api/generate-img';
-import styles from "./index.module.css";
+import { useState } from 'react';
+import axios from 'axios';
 
 const ImageGenerator = () => {
   const [imageUrl, setImageUrl] = useState('');
 
   const handleGenerateImage = async () => {
-    const url = await generateImage();
-    setImageUrl(url);
+    try {
+      const response = await axios.post('/api/generate-image', {
+        prompt: 'a white siamese cat',
+        n: 1,
+        size: '1024x1024',
+      });
+
+      const { imageUrl } = response.data;
+      setImageUrl(imageUrl);
+    } catch (error) {
+      console.error('Failed to generate image:', error);
+    }
   };
 
   return (
     <div>
       <button onClick={handleGenerateImage}>Generate Image</button>
       {imageUrl && <img src={imageUrl} alt="Generated Image" />}
-      <style jsx global>{`
-        body {
-          background-color: #212129;
-          color: #fff !important;
-        }
-        p, h1, h2, h3, h4, h5, h6 {
-          color: #fff !important;
-        }
-      `}</style>
     </div>
   );
 };
 
 export default ImageGenerator;
+
 
