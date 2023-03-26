@@ -6,7 +6,7 @@ const HighchartsPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.stlouisfed.org/fred/series/observations?series_id=GNPCA&api_key=YOUR_API_KEY&file_type=json')
+    fetch('https://api.stlouisfed.org/fred/series/observations?series_id=GNPCA&api_key=3470b12101b9496a3ef4c864044a0692&file_type=json')
       .then(response => response.json())
       .then(json => setData(json.observations))
       .catch(error => console.error(error));
