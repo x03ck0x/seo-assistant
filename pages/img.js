@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import generateImage from './img-gen';
+import generateImage from './api/generate-img';
 
 const ImageGenerator = () => {
   useEffect(() => {
