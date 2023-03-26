@@ -1,19 +1,20 @@
-
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import generateImage from './api/generate-img';
 
 const ImageGenerator = () => {
-  useEffect(() => {
-    const fetchImage = async () => {
-      const imageUrl = await generateImage();
-      // Do something with the image URL, e.g., set it as the src for an img element
-    };
+  const [imageUrl, setImageUrl] = useState('');
 
-    fetchImage();
-  }, []);
+  const handleGenerateImage = async () => {
+    const url = await generateImage();
+    setImageUrl(url);
+  };
 
-  // Render your component
-  return <div>...</div>;
+  return (
+    <div>
+      <button onClick={handleGenerateImage}>Generate Image</button>
+      {imageUrl && <img src={imageUrl} alt="Generated Image" />}
+    </div>
+  );
 };
 
 export default ImageGenerator;
