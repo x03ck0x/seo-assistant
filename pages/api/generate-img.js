@@ -1,31 +1,23 @@
-const YOUR_API_KEY = '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';
+import { Configuration, OpenAIApi } from 'openai';
+
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(configuration);
 
 const generateImage = async () => {
   try {
-    const response = await fetch('https://api.openai.com/v1/images/generations', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${YOUR_API_KEY}`,
-      },
-      body: JSON.stringify({
-        prompt: 'a white siamese cat',
-        n: 1,
-        size: '1024x1024',
-      }),
+    const response = await openai.image.create({
+      prompt: 'a white siamese cat',
+      n: 1,
+      size: '1024x1024',
     });
-    console.log('Response:', response);
 
-    const responseData = await response.json();
-
-    console.log('Response Data:', responseData);
-
-    const imageUrl = responseData.data[0].url;
+    const imageUrl = response.data[0].url;
     console.log(imageUrl);
     return imageUrl;
   } catch (error) {
     console.error('Failed to generate image:', error);
   }
 };
-
-export default generateImage;
