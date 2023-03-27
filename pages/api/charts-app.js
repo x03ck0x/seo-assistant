@@ -173,15 +173,38 @@ const HighchartsPage = () => {
         </select>
       </div>
       <HighchartsReact highcharts={Highcharts} options={options} />
-      <div>
-        <iframe
-          src="https://unusualwhales.com/alt-data#highcharts-ra9grv6-0"
-          title="Your iframe title"
-          width="100%"
-          height="500"
-          frameBorder="0"
-        ></iframe>
+      <div className="link-list">
+        <a
+          href="https://unusualwhales.com/alt-data#highcharts-ra9grv6-0"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="material-icons">link</i>
+          Unusual Whales - Alt Data
+        </a>
+        {/* Add more links here */}
       </div>
+      <style jsx>{`
+        .link-list {
+          background-color: #212129;
+          padding: 5px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .link-list a {
+          color: red;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+        }
+        .link-list a:hover {
+          text-decoration: underline;
+        }
+        .link-list .material-icons {
+          margin-right: 5px;
+        }
+      `}</style>
     </div>
   );
 };
