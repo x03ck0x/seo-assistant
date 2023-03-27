@@ -120,6 +120,26 @@ const HighchartsPage = () => {
         text: 'Value',
       },
     },
+    tooltip: {
+        formatter: function () {
+          return `<b>${this.series.name}</b><br/>${Highcharts.dateFormat('%Y', this.x)}: ${this.y}`;
+        },
+      },
+      plotOptions: {
+        series: {
+          cursor: 'pointer',
+          point: {
+            events: {
+              click: function () {
+                alert(`Category: ${Highcharts.dateFormat('%Y', this.x)}\nValue: ${this.y}`);
+              },
+            },
+          },
+          marker: {
+            lineWidth: 1,
+          },
+        },
+      },
     ...bloombergTheme,
   };
 
