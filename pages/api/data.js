@@ -1,15 +1,24 @@
 // pages/api/gdp-data.js
 import Cors from 'cors';
-import initMiddleware from '../../lib/init-middleware';
 
-const cors = initMiddleware(
-  Cors({
-    methods: ['GET', 'POST', 'OPTIONS'],
-  }),
-);
+const cors = Cors({
+  methods: ['GET', 'POST', 'OPTIONS'],
+});
+
+const runMiddleware = (req, res, fn) => {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+
+      return resolve(result);
+    });
+  });
+};
 
 async function handler(req, res) {
-  await cors(req, res);
+  await runMiddleware(req, res, cors);
 
   const series_id = req.query.series_id || 'GNPCA';
   const API_KEY = process.env.FRED_API_KEY;
@@ -27,3 +36,4 @@ async function handler(req, res) {
 }
 
 export default handler;
+
