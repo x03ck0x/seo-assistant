@@ -9,6 +9,10 @@ const bloombergTheme = {
 
 const seriesOptions = [
   { value: 'GNPCA', label: 'US Real Gross Domestic Product' },
+  { value: 'UNRATE', label: 'Unemployment Rate' },
+  { value: 'DFF', label: 'Federal Funds Effective Rate' },
+  { value: 'PAYEMS', label: 'All Employees, Total Nonfarm' },
+  { value: 'CORESTICKM159SFRBATL', label: 'Sticky Price Consumer Price Index' },
   // Add more series options here
 ];
 
