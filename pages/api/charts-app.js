@@ -178,9 +178,13 @@ const HighchartsPage = () => {
           href="https://unusualwhales.com/alt-data#highcharts-ra9grv6-0"
           target="_blank"
           rel="noopener noreferrer"
-        > </a>
+        >unusualwhales Breakfast Index</a>
       </div>
       <style jsx>{`
+        body {
+          background-color: #212129;
+          color: #fff !important;
+        }
         .link-list {
           background-color: #212129;
           padding: 5px;
