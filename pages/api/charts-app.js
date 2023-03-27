@@ -178,17 +178,13 @@ const HighchartsPage = () => {
           href="https://unusualwhales.com/alt-data#highcharts-ra9grv6-0"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          <i className="material-icons">link</i>
-          Unusual Whales - Alt Data
-        </a>
-        {/* Add more links here */}
+        > </a>
       </div>
       <style jsx>{`
         .link-list {
           background-color: #212129;
           padding: 5px;
-          width: 100%;
+          width: auto;
           display: flex;
           flex-direction: column;
         }
