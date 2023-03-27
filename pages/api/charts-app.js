@@ -4,86 +4,43 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 const bloombergTheme = {
-  chart: {
-    backgroundColor: '#343434',
-    style: {
-      fontFamily: 'Arial',
-    },
-  },
-  title: {
-    style: {
-      color: '#fff',
-    },
-  },
-  xAxis: {
-    gridLineColor: '#555',
-    labels: {
-      style: {
-        color: '#999',
-      },
-    },
-    lineColor: '#555',
-    minorGridLineColor: '#444',
-    tickColor: '#555',
-    title: {
-      style: {
-        color: '#ddd',
-      },
-    },
-  },
-  yAxis: {
-    gridLineColor: '#555',
-    labels: {
-      style: {
-        color: '#999',
-      },
-    },
-    lineColor: '#555',
-    minorGridLineColor: '#444',
-    tickColor: '#555',
-    tickWidth: 1,
-    title: {
-      style: {
-        color: '#ddd',
-      },
-    },
-  },
-  legend: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    itemStyle: {
-      color: '#fff',
-    },
-    itemHoverStyle: {
-      color: '#aaa',
-    },
-    itemHiddenStyle: {
-      color: '#444',
-    },
-    title: {
-      style: {
-        color: '#C0C0C0',
-      },
-    },
-  },
+  // ... (theme options)
 };
+
+const seriesOptions = [
+  { value: 'GNPCA', label: 'US Real Gross Domestic Product' },
+  // Add more series options here
+];
 
 const HighchartsPage = () => {
   const [data, setData] = useState([]);
+  const [selectedSeries, setSelectedSeries] = useState(seriesOptions[0].value);
 
   useEffect(() => {
-    fetch('/api/data')
-      .then(response => response.json())
-      .then(json => setData(json.observations))
-      .catch(error => console.error(error));
-  }, []);
+    fetchData(selectedSeries);
+  }, [selectedSeries]);
+
+  const fetchData = async (seriesId) => {
+    try {
+      const response = await fetch(`/api/data?series_id=${seriesId}`);
+      const json = await response.json();
+      setData(json.observations);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleChangeSeries = (event) => {
+    setSelectedSeries(event.target.value);
+  };
 
   const options = {
     title: {
-      text: 'US Real Gross Domestic Product',
+      text: seriesOptions.find((option) => option.value === selectedSeries)?.label || '',
     },
     series: [
       {
-        name: 'GDP',
+        name: 'Series',
         data: data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]),
       },
     ],
@@ -95,7 +52,7 @@ const HighchartsPage = () => {
     },
     yAxis: {
       title: {
-        text: 'Billions of Dollars',
+        text: 'Value',
       },
     },
     ...bloombergTheme,
@@ -103,6 +60,16 @@ const HighchartsPage = () => {
 
   return (
     <div>
+      <div>
+        <label htmlFor="series-select">Select series:</label>
+        <select id="series-select" value={selectedSeries} onChange={handleChangeSeries}>
+          {seriesOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );
