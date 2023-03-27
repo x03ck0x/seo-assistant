@@ -74,6 +74,23 @@ const seriesOptions = [
   { value: 'DFF', label: 'Federal Funds Effective Rate' },
   { value: 'PAYEMS', label: 'All Employees, Total Nonfarm' },
   { value: 'CORESTICKM159SFRBATL', label: 'Sticky Price Consumer Price Index' },
+  { value: 'DCOILWTICO', label: 'Crude oil West Texas Intermediate data' },
+  { value: 'DCOILBRENTEU', label: 'Crude oil Brent Europe data' },
+  { value: 'DHHNGSP', label: 'Henry Hub Natural Gas Spot Price data' },
+  { value: 'GASDESW', label: 'US Diesel Sales Price data' },
+  { value: 'GASREGCOVW', label: 'US Regular Conventional Gas Price data' },
+  { value: 'DGS20', label: '20 Year Treasury constant maturity rate data' },
+  { value: 'DGS10', label: '10 Year Treasury constant maturity rate data' },
+  { value: 'DGS5', label: '5 Year Treasury constant maturity rate data' },
+  { value: 'DGS1', label: '1 Year Treasury constant maturity rate data' },
+  { value: 'DGS3MO', label: '3 Month Treasury constant maturity rate data' },
+  { value: 'MORTGAGE30US', label: '30 year Mortgage US data' },
+  { value: 'MORTGAGE15US', label: '15 year Mortgage US data' },
+  { value: 'MORTGAGE5US', label: '5 year Mortgage US data' },
+  { value: 'TOTALSA', label: 'vehicle sales data' },
+  { value: 'HOUST', label: 'total us private housing starts data' },
+  { value: 'INDPRO', label: 'industrial production index data' },
+  
   // Add more series options here
 ];
 
@@ -156,6 +173,15 @@ const HighchartsPage = () => {
         </select>
       </div>
       <HighchartsReact highcharts={Highcharts} options={options} />
+      <div>
+        <iframe
+          src="https://unusualwhales.com/alt-data#highcharts-ra9grv6-0"
+          title="Your iframe title"
+          width="100%"
+          height="500"
+          frameBorder="0"
+        ></iframe>
+      </div>
     </div>
   );
 };
