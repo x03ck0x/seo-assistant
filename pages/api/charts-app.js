@@ -5,6 +5,67 @@ import HighchartsReact from 'highcharts-react-official';
 
 const bloombergTheme = {
   // ... (theme options)
+    chart: {
+      backgroundColor: '#343434',
+      style: {
+        fontFamily: 'Arial',
+      },
+    },
+    title: {
+      style: {
+        color: '#fff',
+      },
+    },
+    xAxis: {
+      gridLineColor: '#555',
+      labels: {
+        style: {
+          color: '#999',
+        },
+      },
+      lineColor: '#555',
+      minorGridLineColor: '#444',
+      tickColor: '#555',
+      title: {
+        style: {
+          color: '#ddd',
+        },
+      },
+    },
+    yAxis: {
+      gridLineColor: '#555',
+      labels: {
+        style: {
+          color: '#999',
+        },
+      },
+      lineColor: '#555',
+      minorGridLineColor: '#444',
+      tickColor: '#555',
+      tickWidth: 1,
+      title: {
+        style: {
+          color: '#ddd',
+        },
+      },
+    },
+    legend: {
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      itemStyle: {
+        color: '#fff',
+      },
+      itemHoverStyle: {
+        color: '#aaa',
+      },
+      itemHiddenStyle: {
+        color: '#444',
+      },
+      title: {
+        style: {
+          color: '#C0C0C0',
+        },
+      },
+    },
 };
 
 const seriesOptions = [
