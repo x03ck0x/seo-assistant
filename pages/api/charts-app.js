@@ -4,7 +4,6 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 const bloombergTheme = {
-  colors: ['#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'],
   chart: {
     backgroundColor: '#343434',
     style: {
@@ -68,13 +67,11 @@ const bloombergTheme = {
   },
 };
 
-Highcharts.setOptions(bloombergTheme);
-
 const HighchartsPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('./api/data')
+    fetch('/api/data')
       .then(response => response.json())
       .then(json => setData(json.observations))
       .catch(error => console.error(error));
@@ -101,6 +98,7 @@ const HighchartsPage = () => {
         text: 'Billions of Dollars',
       },
     },
+    ...bloombergTheme,
   };
 
   return (
