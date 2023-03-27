@@ -181,10 +181,6 @@ const HighchartsPage = () => {
         >unusualwhales Breakfast Index</a>
       </div>
       <style jsx>{`
-        body {
-          background-color: #212129;
-          color: #fff !important;
-        }
         .link-list {
           background-color: #212129;
           padding: 5px;
