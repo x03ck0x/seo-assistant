@@ -129,7 +129,7 @@ const HighchartsPage = () => {
     xAxis: {
       type: 'datetime',
       title: {
-        text: 'Year',
+        text: '%Y',
       },
       labels: {
         formatter: function () {
