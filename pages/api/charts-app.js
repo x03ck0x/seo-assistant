@@ -121,7 +121,7 @@ const HighchartsPage = () => {
     navigator: {
       enabled: true,
       series: {
-        data: data ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
+        data: data && data.length > 0 ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
       },
     },
     title: {
