@@ -90,6 +90,7 @@ const seriesOptions = [
   { value: 'TOTALSA', label: 'vehicle sales data' },
   { value: 'HOUST', label: 'total us private housing starts data' },
   { value: 'INDPRO', label: 'industrial production index data' },
+  { value: 'STLFSI4', label: ' St. Louis Fed Financial Stress Index' },
   
   // Add more series options here
 ];
@@ -125,7 +126,7 @@ const HighchartsPage = () => {
         name: 'Series',
         data: data ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
         marker: {
-          enabled: true,
+          enabled: false,
           radius: 3,
         },
         shadow: true,
