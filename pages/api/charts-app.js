@@ -135,6 +135,7 @@ const HighchartsPage = () => {
         formatter: function () {
           return Highcharts.dateFormat('%Y', this.value);
         },
+      },
     },
     yAxis: {
       title: {
