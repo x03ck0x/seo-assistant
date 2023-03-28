@@ -107,6 +107,8 @@ const HighchartsPage = () => {
     try {
       const response = await fetch(`/api/data?series_id=${seriesId}`);
       const json = await response.json();
+      const observations = json.observations || [];
+      console.log(observations);
       setData(json.observations);
     } catch (error) {
       console.error(error);
