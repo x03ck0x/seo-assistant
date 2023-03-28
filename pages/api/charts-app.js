@@ -130,7 +130,7 @@ const HighchartsPage = () => {
     series: [
       {
         name: 'Series',
-        data: data ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
+        data: data && data.length > 0 ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
         marker: {
           enabled: false,
           radius: 3,
@@ -144,7 +144,7 @@ const HighchartsPage = () => {
     xAxis: {
       type: 'datetime',
       title: {
-        text: '%Y',
+        text: 'Year',
       },
       labels: {
         formatter: function () {
