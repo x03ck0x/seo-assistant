@@ -131,6 +131,10 @@ const HighchartsPage = () => {
       title: {
         text: 'Year',
       },
+      labels: {
+        formatter: function () {
+          return Highcharts.dateFormat('%Y', this.value);
+        },
     },
     yAxis: {
       title: {
