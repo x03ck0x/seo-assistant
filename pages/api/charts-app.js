@@ -152,33 +152,34 @@ const HighchartsPage = () => {
       },
     },
     tooltip: {
-        formatter: function () {
-          return `<b>${this.series.name}</b><br/>${Highcharts.dateFormat('%Y', this.x)}: ${this.y}`;
-        },
+      formatter: function () {
+        return `<b>${this.series.name}</b><br/>${Highcharts.dateFormat('%Y', this.x)}: ${this.y}`;
       },
-      plotOptions: {
-        series: {
-          cursor: 'pointer',
-          point: {
-            events: {
-              click: function () {
-                alert(`Category: ${Highcharts.dateFormat('%Y', this.x)}\nValue: ${this.y}`);
-              },
+    },
+    plotOptions: {
+      series: {
+        cursor: 'pointer',
+        point: {
+          events: {
+            click: function () {
+              alert(`Category: ${Highcharts.dateFormat('%Y', this.x)}\nValue: ${this.y}`);
             },
           },
-          marker: {
-            lineWidth: 1,
-          },
+        },
+        marker: {
+          lineWidth: 1,
         },
       },
-    ...bloombergTheme,
+    },
     navigator: {
       enabled: true,
       series: {
-        data: data ? data.map((datum) => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
+        data: data ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
       },
     },
+    ...bloombergTheme,
   };
+  
 
   return (
     <div>
