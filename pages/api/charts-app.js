@@ -170,6 +170,12 @@ const HighchartsPage = () => {
           },
         },
       },
+      navigator: {
+        enabled: true,
+        series: {
+          data: data ? data.map((datum) => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
+        },
+      },
     ...bloombergTheme,
   };
 
