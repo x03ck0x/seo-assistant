@@ -118,8 +118,8 @@ const HighchartsPage = () => {
 
   const options = {
     title: {
-      text: seriesOptions.find((option) => option.value === selectedSeries)?.label || '',
-    },
+      text: selectedSeries ? seriesOptions.find((option) => option.value === selectedSeries).label : '',
+    },    
     series: [
       {
         name: 'Series',
@@ -159,15 +159,6 @@ const HighchartsPage = () => {
       },
     ...bloombergTheme,
   };
-  
-  useEffect(() => {
-    const chart = Highcharts.charts[HighchartsReact.charts.findIndex((c) => c && c.options === options)];
-    if (chart) {
-      chart.setTitle({
-        text: seriesOptions.find((option) => option.value === selectedSeries)?.label || '',
-      });
-    }
-  }, [selectedSeries, options]);
 
   return (
     <div>
