@@ -118,6 +118,12 @@ const HighchartsPage = () => {
   };
 
   const options = {
+    navigator: {
+      enabled: true,
+      series: {
+        data: data ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
+      },
+    },
     title: {
       text: selectedSeries ? seriesOptions.find((option) => option.value === selectedSeries).label : '',
     },    
@@ -169,12 +175,6 @@ const HighchartsPage = () => {
         marker: {
           lineWidth: 1,
         },
-      },
-    },
-    navigator: {
-      enabled: true,
-      series: {
-        data: data ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
       },
     },
     ...bloombergTheme,
