@@ -124,6 +124,14 @@ const HighchartsPage = () => {
       {
         name: 'Series',
         data: data ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
+        marker: {
+          enabled: true,
+          radius: 3,
+        },
+        shadow: true,
+        tooltip: {
+          valueDecimals: 2,
+        },
       },
     ],
     xAxis: {
