@@ -1,143 +1,63 @@
-import React, { useState, useEffect } from 'react';
-import Highcharts from 'highcharts/highstock';
+import React, { useEffect, useState } from 'react';
+import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-if (typeof Highcharts === 'object') {
-    VBP(Highcharts);
-  }
+const names = ['MSFT', 'AAPL', 'GOOG'];
+const urls = [
+  'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/msft-c.json',
+  'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/aapl-c.json',
+  'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/goog-c.json'
+];
 
-const HighchartsStock = () => {
-  const [options, setOptions] = useState({});
+const Chart = () => {
+  const [seriesOptions, setSeriesOptions] = useState([]);
+  const [seriesCounter, setSeriesCounter] = useState(0);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('https://demo-live-data.highcharts.com/aapl-ohlcv.json');
-      const data = await response.json();
-      const ohlc = [];
-      const volume = [];
-      const dataLength = data.length;
-      const groupingUnits = [
-        [
-          'week',
-          [1]
-        ], [
-          'month',
-          [1, 2, 3, 4, 6]
-        ]
-      ];
-
-      for (let i = 0; i < dataLength; i += 1) {
-        ohlc.push([
-          new Date(data[i][0]).getTime(),
-          data[i][1],
-          data[i][2],
-          data[i][3],
-          data[i][4]
-        ]);
-
-        volume.push([
-          new Date(data[i][0]).getTime(),
-          data[i][5]
-        ]);
+    const fetchData = async (url, name) => {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        const data = json.map((datum) => [new Date(datum.date).getTime(), parseFloat(datum.close)]);
+        setSeriesOptions((prevSeriesOptions) => [...prevSeriesOptions, { name, data }]);
+        setSeriesCounter((prevSeriesCounter) => prevSeriesCounter + 1);
+      } catch (error) {
+        console.error(error);
       }
-
-      setOptions({
-        rangeSelector: {
-          selected: 2
-        },
-
-        title: {
-          text: 'AAPL Historical'
-        },
-
-        subtitle: {
-          text: 'With SMA and Volume by Price technical indicators'
-        },
-
-        yAxis: [{
-          startOnTick: false,
-          endOnTick: false,
-          labels: {
-            align: 'right',
-            x: -3
-          },
-          title: {
-            text: 'OHLC'
-          },
-          height: '60%',
-          lineWidth: 2,
-          resize: {
-            enabled: true
-          }
-        }, {
-          labels: {
-            align: 'right',
-            x: -3
-          },
-          title: {
-            text: 'Volume'
-          },
-          top: '65%',
-          height: '35%',
-          offset: 0,
-          lineWidth: 2
-        }],
-
-        tooltip: {
-          split: true
-        },
-
-        plotOptions: {
-          series: {
-            dataGrouping: {
-              units: groupingUnits
-            }
-          }
-        },
-
-        series: [{
-          type: 'candlestick',
-          name: 'AAPL',
-          id: 'aapl',
-          zIndex: 2,
-          data: ohlc
-        }, {
-          type: 'column',
-          name: 'Volume',
-          id: 'volume',
-          data: volume,
-          yAxis: 1
-        }, {
-          type: 'vbp',
-          linkedTo: 'aapl',
-          params: {
-            volumeSeriesID: 'volume'
-          },
-          dataLabels: {
-            enabled: false
-          },
-          zoneLines: {
-            enabled: false
-          }
-        }, {
-          type: 'sma',
-          linkedTo: 'aapl',
-          zIndex: 1,
-          marker: {
-            enabled: false
-          }
-        }]
-      });
     };
 
-    fetchData();
+    urls.forEach((url, index) => fetchData(url, names[index]));
   }, []);
+
+  const createChart = () => {
+    Highcharts.stockChart('container', {
+      rangeSelector: {
+        selected: 4,
+      },
+      plotOptions: {
+        series: {
+          showInNavigator: true,
+        },
+      },
+      tooltip: {
+        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} USD</b><br/>',
+        valueDecimals: 2,
+      },
+      series: seriesOptions,
+    });
+  };
+
+  useEffect(() => {
+    if (seriesCounter === names.length) {
+      createChart();
+    }
+  }, [seriesCounter]);
 
   return (
     <div>
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      <HighchartsReact highcharts={Highcharts} options={{}} />
     </div>
   );
 };
 
-export default HighchartsStock;
+export default Chart;
