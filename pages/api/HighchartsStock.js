@@ -15,8 +15,18 @@ const MyChart = () => {
   }, []);
 
   const options = {
+    
+    rangeSelector: {
+        selected: 4
+    },
+
     title: {
       text: 'My Chart',
+    },
+    plotOptions: {
+        series: {
+            showInNavigator: true
+        }
     },
     series: [],
   };
