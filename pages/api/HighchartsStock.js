@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
-import VBP from 'highcharts/indicators/volume-by-price';
 
 if (typeof Highcharts === 'object') {
     VBP(Highcharts);
