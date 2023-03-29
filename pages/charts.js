@@ -6,6 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <HighchartsPage />
+      <HighchartsStock />
       <style jsx global>{`
         body {
           background-color: #212129;
