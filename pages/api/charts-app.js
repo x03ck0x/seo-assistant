@@ -150,7 +150,7 @@ const HighchartsPage = () => {
       },
       labels: {
         formatter: function () {
-          return Highcharts.dateFormat('%Y-%m-%d', this.value);
+          return Highcharts.dateFormat('%Y-%m-%d', this.date);
         },
       },
     },
