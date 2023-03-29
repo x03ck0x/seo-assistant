@@ -132,7 +132,7 @@ const HighchartsPage = () => {
     series: [
       {
         name: 'Series',
-        data: data && data.length > 0 ? data.map(datum => [new Date(datum.date).getTime(), parseFloat(datum.value)]) : [],
+        data: data.map((datum) => [Date.parse(datum.date), parseFloat(datum.value)]),
         marker: {
           enabled: false,
           radius: 3,
@@ -150,7 +150,7 @@ const HighchartsPage = () => {
       },
       labels: {
         formatter: function () {
-          return Highcharts.dateFormat('%Y', this.value);
+          return Highcharts.dateFormat('%Y-%m-%d', this.value);
         },
       },
     },
