@@ -1,45 +1,60 @@
-import React, { useEffect, useRef } from 'react';
-import Highcharts from 'highcharts/highstock';
+import React, { useEffect } from 'react';
+import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-const MyChart = () => {
-  const chartRef = useRef(null);
+const options = {
+  chart: {
+    backgroundColor: 'black',
+  },
+  rangeSelector: {
+    selected: 1,
+  },
+  title: {
+    text: 'AAPL Stock Price',
+    style: {
+      color: '#fff',
+    },
+  },
+  navigator: {
+    series: {
+      type: 'area',
+      color: '#808080',
+      fillOpacity: 0.05,
+      lineWidth: 1,
+      lineColor: '#808080',
+      marker: {
+        enabled: false,
+      },
+    },
+  },
+  series: [
+    {
+      name: 'AAPL',
+      data: [],
+      tooltip: {
+        valueDecimals: 2,
+      },
+      color: '#fff',
+    },
+  ],
+};
 
+const HighchartsPage = () => {
   useEffect(() => {
-    const chart = chartRef.current.chart;
-
-    chart.addSeries({
-      name: 'Series',
-      data: [1, 2, 3],
-    });
+    fetch('https://demo-live-data.highcharts.com/aapl-c.json')
+      .then((res) => res.json())
+      .then((data) => {
+        options.series[0].data = data;
+      });
   }, []);
 
-  const options = {
-    
-    rangeSelector: {
-        selected: 4
-    },
-
-    title: {
-      text: 'My Chart',
-    },
-    plotOptions: {
-        series: {
-            showInNavigator: true
-        }
-    },
-    series: [],
-  };
-
   return (
-    <div>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={options}
-        ref={chartRef}
-      />
-    </div>
+    <HighchartsReact
+      highcharts={Highcharts}
+      constructorType="stockChart"
+      options={options}
+    />
   );
 };
 
-export default MyChart;
+export default HighchartsPage;
