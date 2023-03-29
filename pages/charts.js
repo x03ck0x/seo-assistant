@@ -1,6 +1,7 @@
 // pages/index.js
 import React from 'react';
 import HighchartsPage from './api/charts-app';
+import HighchartsStock from './api/HighchartsStock';
 
 const HomePage = () => {
   return (
