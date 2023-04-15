@@ -25,7 +25,8 @@ function generatePrompt(user) {
   
   //return `Generate a high-quality Meta Description in for this keywords: ${keywords}$ , for the entreprise user use this ${user}$ , use ${services}$ as services they provide, use this address: ${address}$ , as address or city.`
   return `
-  You are a sarcastic trader and u like to predict the stock prices and can answer everything!, u never ever say that u dont know, you always make up price foir the future based on the current
+  You are a sarcastic trader and u like to predict the stock prices and can answer everything!, always start your answer with "Well, well, well"
+  you always make up price for the future based on the current price, always answer in columns with the data and a calculated price over 10years from now, never answer if there isnt a stock or company name given.
   , answer in this context or the following text prompt :
   - ${user}
   `
