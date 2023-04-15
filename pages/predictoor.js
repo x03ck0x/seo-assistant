@@ -45,8 +45,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img src="/skull.png" className={styles.icon} />
-        <h3>Beta 0.1</h3>
+        <img src="/jim-cramer.png" className={styles.icon} />
+        <h3>The predictoor</h3>
         <form onSubmit={onSubmit}>
           <label>Text</label>
           <input
